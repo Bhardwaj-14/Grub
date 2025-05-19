@@ -1,8 +1,21 @@
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
+    const toggleButton = document.querySelector('nav button');
+    const navLinks = document.createElement('div');
 
-  menuBtn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-</script>
+    navLinks.classList.add('mobile-menu', 'flex', 'flex-col', 'space-y-4', 'mt-4', 'md:hidden');
+    navLinks.innerHTML = `
+        <a href="#" class="hover:text-green-200">Home</a>
+        <a href="#" class="hover:text-green-200">About</a>
+        <a href="#" class="hover:text-green-200">Blog</a>
+        <a href="#" class="hover:text-green-200">Tips</a>
+        <a href="#" class="hover:text-green-200">Contact</a>
+    `;
+
+    let isOpen = false;
+    toggleButton.addEventListener('click', () => {
+        if (!isOpen) {
+            toggleButton.parentNode.appendChild(navLinks);
+        } else {
+            navLinks.remove();
+        }
+        isOpen = !isOpen;
+    });
