@@ -24,3 +24,12 @@
 .faq-toggle:checked ~ .faq-answer {
     max-height: 500px;
 }
+
+.faq-item .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
