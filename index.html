@@ -6,28 +6,36 @@
     <title>JPIC Marians</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <link href = "script.js">
 </head>
 <body class="bg-gray-50 font-sans">
     <nav class="bg-green-700 text-white shadow-lg">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold">JPIC</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#" class="hover:text-green-200">Home</a>
-                    <a href="#" class="hover:text-green-200">About</a>
-                    <a href="#" class="hover:text-green-200">Blog</a>
-                    <a href="#" class="hover:text-green-200">Tips</a>
-                    <a href="#" class="hover:text-green-200">Contact</a>
-                </div>
-                <button class="md:hidden focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
-
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <div class="text-2xl font-bold">JPIC</div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#home" class="hover:text-green-200">Home</a>
+        <a href="#about" class="hover:text-green-200">About</a>
+        <a href="#blog" class="hover:text-green-200">Blog</a>
+        <a href="#tips" class="hover:text-green-200">Tips</a>
+        <a href="#contact" class="hover:text-green-200">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="menu" class="hidden md:hidden flex flex-col space-y-4 py-4">
+      <a href="#home" class="hover:text-green-200">Home</a>
+      <a href="#about" class="hover:text-green-200">About</a>
+      <a href="#blog" class="hover:text-green-200">Blog</a>
+      <a href="#tips" class="hover:text-green-200">Tips</a>
+      <a href="#contact" class="hover:text-green-200">Contact</a>
+    </div>
+  </div>
+</nav>
     <section class="bg-green-600 text-white py-16">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-8 md:mb-0">
